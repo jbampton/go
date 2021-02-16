@@ -14,7 +14,7 @@ import (
 	"testing"
 )
 
-const testGroupFile = `# See the opendirectoryd(8) man page for additional 
+const testGroupFile = `# See the opendirectoryd(8) man page for additional
 # information about Open Directory.
 ##
 nobody:*:-2:
@@ -24,7 +24,7 @@ emptyid:*::root
 invalidgid:*:notanumber:root
 +plussign:*:20:root
 -minussign:*:21:root
-      
+
 daemon:*:1:root
     indented:*:7:
 # comment:*:4:found

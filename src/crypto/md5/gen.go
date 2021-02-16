@@ -228,7 +228,7 @@ func blockGeneric(dig *digest, p []byte) {
 			{{printf "arg0 = arg1 + bits.RotateLeft32((((arg2^arg3)&arg1)^arg3)+arg0+x%x+%#08x, %d)" (idx 1 $i) (index $.Table1 $i) $s | relabel}}
 			{{rotate -}}
 		{{end}}
-	
+
 		// round 2
 		{{range $i, $s := dup 4 .Shift2 -}}
 			{{printf "arg0 = arg1 + bits.RotateLeft32((((arg1^arg2)&arg3)^arg2)+arg0+x%x+%#08x, %d)" (idx 2 $i) (index $.Table2 $i) $s | relabel}}
